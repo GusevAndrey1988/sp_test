@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle(" Условия сотрудничества");
+$APPLICATION->SetTitle("Как стать партнером");
 ?>
 
 Text here....
