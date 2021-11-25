@@ -69,6 +69,15 @@ $APPLICATION->IncludeFile(
 				<a href="<?=SITE_DIR?>" class="home-icon" title="<?=GetMessage('CFT_MAIN')?>"></a>
 				<a href="<?=SITE_DIR?>search/" class="search-icon" title="<?=GetMessage('CFT_SEARCH')?>"></a>
 				<a href="<?=SITE_DIR?>contacts/" class="feedback-icon" title="<?=GetMessage('CFT_FEEDBACK')?>"></a>
+				<?
+					$contactFile = 'email.php';
+					if (\Site\SiteUtils::currentTimeInRange(
+						strtotime('midnight +9 hours'),
+						strtotime('midnight +18 hours'),
+					)) {
+						$contactFile = 'phone.php';
+					}
+				?>
 				<?$APPLICATION->IncludeComponent(
 					"bitrix:main.include", 
 					".default", 
@@ -78,7 +87,7 @@ $APPLICATION->IncludeFile(
 						"AREA_FILE_RECURSIVE" => "Y",
 						"EDIT_TEMPLATE" => "",
 						"COMPONENT_TEMPLATE" => ".default",
-						"PATH" => SITE_DIR . "include/phone.php"
+						"PATH" => SITE_DIR . "include/" . $contactFile
 					),
 					false
 				);?>
