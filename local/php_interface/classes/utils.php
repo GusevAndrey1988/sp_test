@@ -5,7 +5,7 @@ namespace Site;
 /**
  * Вспомогательные функции для сайта
  */
-class SiteUtils
+class Utils
 {
     /**
      * @param int $from Начало интервала (Unix timestamp)
@@ -15,7 +15,7 @@ class SiteUtils
      * 
      * @throws \Bitrix\Main\ArgumentException
      */
-    public static function currentTimeInRange(int $from, int $to)
+    public static function currentTimeInRange(int $from, int $to): bool
     {
         if ($to < $from)
         {
@@ -35,5 +35,28 @@ class SiteUtils
         }
 
         return false;
+    }
+
+    /**
+     * Обрезает текст по слову
+     * 
+     * @param string $text Текст
+     * @param int $length Жедаемая длинна текста (в символах)
+     * @param string $ending Окончание текста
+     * 
+     * @return string Обрезанный текст
+     */
+    public static function trimByWord(string $text, int $length, string $ending = ' &#8230;'): string
+    {
+        if (mb_strlen($text) > $length)
+        {
+            if (($realPos = mb_strpos($text, ' ', $length)) !== false)
+            {
+                $text = mb_substr($text, 0, $realPos);
+            }
+            $text .= $ending;
+        }
+
+        return $text;
     }
 }

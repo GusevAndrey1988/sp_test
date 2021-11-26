@@ -1,5 +1,5 @@
 <?php
-    $isWorkTime = \Site\SiteUtils::currentTimeInRange(
+    $isWorkTime = \Site\Utils::currentTimeInRange(
         strtotime('midnight +9 hours'),
         strtotime('midnight +18 hours'),
     );

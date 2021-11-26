@@ -9,6 +9,6 @@ $documentRoot = \Bitrix\Main\Application::getDocumentRoot();
 Loader::registerAutoLoadClasses(
     null,
     [
-        '\\Site\\SiteUtils' => '/local/php_interface/classes/utils.php',
+        '\\Site\\Utils' => '/local/php_interface/classes/utils.php',
     ]
 );

@@ -1,0 +1,52 @@
+#site-review-list {
+	--review-font-name-color: #67727c;
+	--review-font-light-color: #bababa;
+
+	padding: 0;
+	margin: 0;
+	margin-top: 10px;
+
+	font-size: 0.7rem;
+}
+
+#site-review-list .site-review-item {
+	margin-bottom: 10px;
+	padding: 10px;
+
+	list-style: none;
+}
+
+.site-review-avatar {
+	float: left;
+}
+
+.site-review-avatar img {
+	max-width: 64px;
+	margin-right: 10px;
+
+	border-radius: 50%;
+}
+
+.site-review-block p {
+	margin: 0;
+}
+
+.site-review-name {
+	padding-right: 8px;
+
+	font-size: 0.85rem;
+	font-weight: bold;
+	color: var(--review-font-name-color);
+}
+
+.site-review-date {
+	color: var(--review-font-light-color);
+}
+
+.site-review-block .site-review-text {
+	clear: both;
+
+	margin-top: 10px;
+
+	line-height: 1.5;
+}

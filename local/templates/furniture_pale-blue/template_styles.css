@@ -199,6 +199,10 @@ dl.block-list a:hover { text-decoration: underline;}
 	margin: 0 0 1em;
 }
 
+#sidebar .site-review-title {
+	margin-top: 30px;
+}
+
 #left-menu
 {
 	margin:0;
