@@ -47,15 +47,15 @@ $APPLICATION->IncludeFile(
 			
 			<div id="top-menu">
 				<div id="top-menu-inner">
-<?$APPLICATION->IncludeComponent("bitrix:menu", "horizontal_multilevel", array(
-	"ROOT_MENU_TYPE" => "top",
-	"MAX_LEVEL" => "2",
-	"CHILD_MENU_TYPE" => "left",
-	"USE_EXT" => "Y",
-	"MENU_CACHE_TYPE" => "A",
-	"MENU_CACHE_TIME" => "36000000",
-	"MENU_CACHE_USE_GROUPS" => "Y",
-	"MENU_CACHE_GET_VARS" => ""
+<?$APPLICATION->IncludeComponent("bitrix:menu", "main_menu_custom_color", Array(
+	"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+		"MAX_LEVEL" => "2",	// Уровень вложенности меню
+		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+		"USE_EXT" => "Y",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+		"MENU_CACHE_TYPE" => "A",	// Тип кеширования
+		"MENU_CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+		"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
 	),
 	false,
 	array(
