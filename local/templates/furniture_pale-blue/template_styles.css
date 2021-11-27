@@ -60,11 +60,12 @@ form.main-form
 #logo td { padding: 0;}
 #logo a { outline: none;}
 
-#top-icons { overflow: hidden; height: 15px; position: absolute; top: 17px; width: 280px; left: 252px; }
+#top-icons { overflow: hidden; height: 15px; position: absolute; top: 17px; width: 300px; left: 252px; }
 #top-icons a 
 {
 	float: left;
 	margin-right: 31px;
+	line-height: 0.7rem;
 }
 
 a.home-icon { width: 12px; height: 11px;}
